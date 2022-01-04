@@ -20,6 +20,6 @@ head(dat)
 plot_chamber(dat, drop_constant = T)
 ```
 
-![](https://i.imgur.com/okzgwD1.png)
+![](https://i.imgur.com/yAfkVuT.png)
 
 <sup>Created on 2022-01-04 by the [reprex package](https://reprex.tidyverse.org) (v2.0.1)</sup>
