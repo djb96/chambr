@@ -21,6 +21,8 @@ plot_chamber <- function(.data, drop_constant = F) {
     tidyr::pivot_longer(where(is.numeric)) %>%
     ggplot2::ggplot(ggplot2::aes(x = time, y = value)) +
     ggplot2::geom_line() +
-    ggplot2::facet_wrap(~name, scales = "free_y") +
-    ggplot2::labs(x = NULL, y = NULL)
+    ggplot2::facet_wrap(~name, scales = "free_y", strip.position = "left") +
+    ggplot2::labs(x = NULL, y = NULL) +
+    ggplot2::theme(strip.placement = "outside",
+                   strip.background = ggplot2::element_blank())
 }
