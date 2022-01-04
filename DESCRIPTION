@@ -10,4 +10,10 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
 Imports: 
-    magrittr
+    cli,
+    glue,
+    lifecycle,
+    magrittr,
+    rlang,
+    withr
+Roxygen: list(markdown = TRUE)

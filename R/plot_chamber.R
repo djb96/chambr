@@ -12,16 +12,15 @@
 #' @export
 #'
 
-plot_chamber = function(.data, drop_constant = F){
-
-  if(drop_constant){
-    .data = janitor::remove_constant(dat = .data, quiet = T)
+plot_chamber <- function(.data, drop_constant = F) {
+  if (drop_constant) {
+    .data <- janitor::remove_constant(dat = .data, quiet = T)
   }
 
   .data %>%
     tidyr::pivot_longer(where(is.numeric)) %>%
     ggplot2::ggplot(ggplot2::aes(x = time, y = value)) +
     ggplot2::geom_line() +
-    ggplot2::facet_wrap(~name, scales = "free_y")
-
+    ggplot2::facet_wrap(~name, scales = "free_y") +
+    ggplot2::labs(x = NULL, y = NULL)
 }
